@@ -2,6 +2,7 @@ from pydantic_ai import Agent
 from pydantic_ai.models.openai import OpenAIModel
 from pydantic_ai.providers.openai import OpenAIProvider
 from dotenv import load_dotenv
+from prompt_toolkit import prompt
 import tools
 import os
 
@@ -35,13 +36,16 @@ fileagent = Agent(
 def main():
     history = []
     while True:
-        user_input = input("[User]: ")
-        if user_input.lower() == "exit":
-            break
+        try:
+            user_input = prompt("[User]: ")
+            if user_input.lower() == "exit":
+                break
 
-        resp = fileagent.run_sync(user_prompt=user_input, message_history=history)
-        history=list(resp.all_messages())
-        print("[Agent]:", resp.output, '\n')
+            resp = fileagent.run_sync(user_prompt=user_input, message_history=history)
+            history = list(resp.all_messages())
+            print("[Agent]:", resp.output, '\n')
+        except KeyboardInterrupt:
+            break
 
 
 if __name__ == "__main__":
