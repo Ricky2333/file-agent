@@ -1,0 +1,1 @@
+Go to the trash folder. Delete all files except those with a .pdf extension. Then rename each of the remaining .pdf files to a new name of your choice (e.g., doc1.pdf, doc2.pdf).

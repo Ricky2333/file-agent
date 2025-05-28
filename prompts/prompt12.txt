@@ -1,0 +1,1 @@
+Create a folder named trash. Inside it, generate at least 6 files in various formats — including .txt, .md, .log, .csv, and make sure at least two files are in .pdf format. Each file should have simple placeholder content like 'This is a [filetype] file'. File names should be arbitrary but valid, like sample1.txt, report2.pdf, etc.

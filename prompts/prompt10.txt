@@ -1,0 +1,1 @@
+Create a file named 'story.txt' and write a random story into it.

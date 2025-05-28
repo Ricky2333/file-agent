@@ -1,0 +1,1 @@
+Create a folder named 'backup' and copy all files from the 'data' folder into it.

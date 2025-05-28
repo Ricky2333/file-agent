@@ -1,0 +1,1 @@
+Append the text 'Additional content.' to an existing file named 'file4.txt' from 'documents' folder.

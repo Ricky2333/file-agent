@@ -1,0 +1,1 @@
+Create a new folder named 'program'. Within this folder, create 6 files that are written in 6 programming languages like Python, C++, etc., each containing a 'Hello, World!' program.
