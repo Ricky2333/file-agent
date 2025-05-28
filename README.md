@@ -43,11 +43,18 @@ source .venv/bin/activate  # On Windows, use .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Configure environment variables. 
-Create a `.env` file and add your API key:
+4. Set up DeepSeek API access
 
-```
-OPENAI_API_KEY=your_api_key_here
+- Visit [DeepSeek Platform](https://platform.deepseek.com/api_keys)
+- Sign up for an account if you haven't already
+- Go to API settings in your dashboard
+- Generate a new API key
+- Copy your API key
+
+5. Configure environment variables. 
+Create a `.env` file and add your API key:
+```bash
+echo "OPENAI_API_KEY=your_api_key_here" > .env
 ```
 
 ## Usage
