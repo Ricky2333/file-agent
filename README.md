@@ -14,8 +14,6 @@ Simple File Agent is a command-line based file management assistant that uses AI
 - **Natural Language Interaction**: Execute complex file operations through simple natural language commands
 - **Interactive Interface**: Clean command-line interaction
 
-
-
 ## Technology Stack
 
 - Python
@@ -30,7 +28,7 @@ Simple File Agent is a command-line based file management assistant that uses AI
 
 ```bash
 git clone https://github.com/yourusername/simple-file-agent.git
-cd simple-file-agent
+cd file-agent
 ```
 
 
