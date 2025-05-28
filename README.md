@@ -37,8 +37,7 @@ cd simple-file-agent
 2. Create and activate a virtual environment
 ```
 python -m venv .venv
-source .venv/bin/activate  # On Windows, use .
-venv\Scripts\activate
+source .venv/bin/activate  # On Windows, use .venv\Scripts\activate
 ```
 
 3. Install dependencies
@@ -47,12 +46,11 @@ pip install -r requirements.txt
 ```
 
 4. Configure environment variables. 
-Create a .env file and add your API key:
+Create a `.env` file and add your API key:
 
 ```
 OPENAI_API_KEY=your_api_key_here
 ```
-
 
 ## Usage
 
