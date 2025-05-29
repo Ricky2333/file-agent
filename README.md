@@ -18,7 +18,7 @@ Simple File Agent is a command-line based file management assistant that uses AI
 
 - Python
 - pydantic-ai
-- OpenAI API (using DeepSeek Chat model)
+- OpenAI API (supporting multiple providers like DeepSeek and Qwen (DashScope))
 
 
 
@@ -43,19 +43,35 @@ source .venv/bin/activate  # On Windows, use .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Set up DeepSeek API access
+4. Set up API access
 
-- Visit [DeepSeek Platform](https://platform.deepseek.com/api_keys)
-- Sign up for an account if you haven't already
-- Go to API settings in your dashboard
-- Generate a new API key
-- Copy your API key
+   Depending on the model you intend to use (configured in `main.py`), you'll need to set up the corresponding API key:
 
-5. Configure environment variables. 
-Create a `.env` file and add your API key:
-```bash
-echo "OPENAI_API_KEY=your_api_key_here" > .env
-```
+   - **For DeepSeek (if `MODEL = 'DEEPSEEK'`)**:
+     - Visit [DeepSeek Platform](https://platform.deepseek.com/api_keys)
+     - Sign up for an account if you haven't already
+     - Go to API settings in your dashboard
+     - Generate a new API key
+     - Copy your API key
+
+   - **For Qwen (DashScope) (if `MODEL = 'QWEN'`)**:
+     - Visit [Alibaba Cloud DashScope Console](https://dashscope.console.aliyun.com/)
+     - Log in or sign up for an Alibaba Cloud account.
+     - Navigate to the API Key management section (usually under your account settings or a specific service like "Model Service R&D Platform").
+     - Create or retrieve your API key.
+
+5. Configure environment variables.
+   Create a `.env` file in the root directory of the project. Add the API key corresponding to the model you plan to use.
+
+   - If using DeepSeek:
+     ```bash
+     echo "DEEPSEEK_API_KEY=your_deepseek_api_key_here" > .env
+     ```
+   - If using Qwen (DashScope):
+     ```bash
+     echo "DASHSCOPE_API_KEY=your_dashscope_api_key_here" > .env
+     ```
+   You can also add both keys if you plan to switch between models, but `main.py` will only use the one relevant to the `MODEL` variable setting.
 
 ## Usage
 
